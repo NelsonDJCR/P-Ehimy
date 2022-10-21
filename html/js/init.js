@@ -11,36 +11,36 @@ jQuery(document).ready(function(){
 	
 	// here all ready functions
 	
-	aali_tm_resume_image_width();
-	aali_tm_nav_bg();
-	aali_tm_trigger_menu();
-	aali_tm_hero_image();
-	aali_tm_service_popup();
-	aali_tm_portfolio_popup();
-	aali_tm_news_popup();
-	aali_tm_cursor();
-	aali_tm_imgtosvg();
-	aali_tm_popup();
-	aali_tm_portfolio();
-	aali_tm_data_images();
-	aali_tm_contact_form();
-	aali_tm_jarallax();
-	aali_tm_testimonial_arrow();
-	aali_tm_owl_carousel();
-	aali_tm_about_animation();
-	aali_tm_moving_animation();
-	aali_tm_down();
-	aali_tm_totop();
+	ehimy_tm_resume_image_width();
+	ehimy_tm_nav_bg();
+	ehimy_tm_trigger_menu();
+	ehimy_tm_hero_image();
+	ehimy_tm_service_popup();
+	ehimy_tm_portfolio_popup();
+	ehimy_tm_news_popup();
+	ehimy_tm_cursor();
+	ehimy_tm_imgtosvg();
+	ehimy_tm_popup();
+	ehimy_tm_portfolio();
+	ehimy_tm_data_images();
+	ehimy_tm_contact_form();
+	ehimy_tm_jarallax();
+	ehimy_tm_testimonial_arrow();
+	ehimy_tm_owl_carousel();
+	ehimy_tm_about_animation();
+	ehimy_tm_moving_animation();
+	ehimy_tm_down();
+	ehimy_tm_totop();
 	
-	aali_tm_color_switcher();
-	aali_tm_switcher_opener();
-	aali_tm_cursor_switcher();
+	ehimy_tm_color_switcher();
+	ehimy_tm_switcher_opener();
+	ehimy_tm_cursor_switcher();
 	
 	jQuery(window).load('body', function(){
-		aali_tm_my_load();
+		ehimy_tm_my_load();
 	});
 	jQuery(window).on('resize', function(){
-		aali_tm_resume_image_width();
+		ehimy_tm_resume_image_width();
 	});
 	
 });
@@ -49,11 +49,11 @@ jQuery(document).ready(function(){
 // ---------------   FUNCTIONS    ----------------------
 // -----------------------------------------------------
 
-function aali_tm_testimonial_arrow(){
+function ehimy_tm_testimonial_arrow(){
 	
 	"use strict";
 	
-	$('.aali_tm_testimonials .direct a').on('mouseenter',function(){
+	$('.ehimy_tm_testimonials .direct a').on('mouseenter',function(){
 		var e = $(this);
 		var p = e.closest('.direct');
 		if(e.hasClass('prev_button')){
@@ -74,12 +74,12 @@ function aali_tm_testimonial_arrow(){
 // ------------   RESUME IMAGE WIDTH    ----------------
 // -----------------------------------------------------
 
-function aali_tm_resume_image_width(){
+function ehimy_tm_resume_image_width(){
 	
 	"use strict";
 	
-	var media			= jQuery('.aali_tm_resume .media');
-	var contentWidth	= jQuery('.aali_tm_resume .resume_in').width();
+	var media			= jQuery('.ehimy_tm_resume .media');
+	var contentWidth	= jQuery('.ehimy_tm_resume .resume_in').width();
 	media.css({width: (($(window).width() - contentWidth)/2 + 0.15*contentWidth) +'px'});
 }
 
@@ -87,12 +87,12 @@ function aali_tm_resume_image_width(){
 // -------------   TOPBAR BG SCROLL  ---------------
 // -------------------------------------------------
 
-function aali_tm_nav_bg(){
+function ehimy_tm_nav_bg(){
 	
 	"use strict";
 	
 	jQuery(window).on('scroll',function(){
-		var menu	 		= jQuery('.aali_tm_header');
+		var menu	 		= jQuery('.ehimy_tm_header');
 		var WinOffset		= jQuery(window).scrollTop();
 		
 		if(WinOffset >= 100){
@@ -113,13 +113,13 @@ jQuery('.anchor_nav').onePageNav();
 // ---------------   TRIGGER MENU    -------------------
 // -----------------------------------------------------
 
-function aali_tm_trigger_menu(){
+function ehimy_tm_trigger_menu(){
 	
 	"use strict";
 
-	var hamburger 		= jQuery('.aali_tm_mobile_menu .trigger .hamburger');
-	var mobileMenu		= jQuery('.aali_tm_mobile_menu .dropdown');
-	var mobileMenuList	= jQuery('.aali_tm_mobile_menu .dropdown .dropdown_inner ul li a');
+	var hamburger 		= jQuery('.ehimy_tm_mobile_menu .trigger .hamburger');
+	var mobileMenu		= jQuery('.ehimy_tm_mobile_menu .dropdown');
+	var mobileMenuList	= jQuery('.ehimy_tm_mobile_menu .dropdown .dropdown_inner ul li a');
 
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
@@ -135,7 +135,7 @@ function aali_tm_trigger_menu(){
 	});
 	
 	mobileMenuList.on('click',function(){
-		jQuery('.aali_tm_mobile_menu .trigger .hamburger').removeClass('is-active');
+		jQuery('.ehimy_tm_mobile_menu .trigger .hamburger').removeClass('is-active');
 		mobileMenu.slideUp();
 		return false;
 	});
@@ -145,21 +145,21 @@ function aali_tm_trigger_menu(){
 // ---------------   HERO IMAGE  -----------------------
 // -----------------------------------------------------
 
-function aali_tm_hero_image(){
+function ehimy_tm_hero_image(){
 	
 	"use strict";
 	
-	var FixedImage	= jQuery('.aali_tm_hero .right .image .main').data('img-url');
-	var wrapper	= jQuery('.aali_tm_hero .services ul');
+	var FixedImage	= jQuery('.ehimy_tm_hero .right .image .main').data('img-url');
+	var wrapper	= jQuery('.ehimy_tm_hero .services ul');
 	var list	= wrapper.find('li a');
 	list.on('mouseenter',function(){
 		var element = jQuery(this);
 		var image	= element.find('.image').attr('src');
-		element.closest('.aali_tm_hero').find('.right .image .main').css({backgroundImage:'url('+image+')'});
+		element.closest('.ehimy_tm_hero').find('.right .image .main').css({backgroundImage:'url('+image+')'});
 		console.log(image);
 	});
 	wrapper.on('mouseleave',function(){
-		jQuery('.aali_tm_hero .right .image .main').css({backgroundImage:'url('+FixedImage+')'});
+		jQuery('.ehimy_tm_hero .right .image .main').css({backgroundImage:'url('+FixedImage+')'});
 	});
 }
 
@@ -167,24 +167,24 @@ function aali_tm_hero_image(){
 // -------------  SERVICE POPUP  -------------------
 // -------------------------------------------------
 
-function aali_tm_service_popup(){
+function ehimy_tm_service_popup(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.aali_tm_modalbox');
-	var button			= jQuery('.aali_tm_service .service_list ul li .aali_tm_full_link');
+	var modalBox		= jQuery('.ehimy_tm_modalbox');
+	var button			= jQuery('.ehimy_tm_service .service_list ul li .ehimy_tm_full_link');
 	var closePopup		= modalBox.find('.close');
 	
 	button.on('click',function(){
 		var element = jQuery(this);
-		var parent	= element.closest('.aali_tm_service .service_list ul li');
+		var parent	= element.closest('.ehimy_tm_service .service_list ul li');
 		var elImage	= parent.find('.popup_service_image').attr('src');
 		var title	= parent.find('.title').html();
 		var content = parent.find('.service_hidden_details').html();
 		modalBox.addClass('opened');
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.service_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+elImage+'"></div></div>');
-		aali_tm_data_images();
+		ehimy_tm_data_images();
 		modalBox.find('.service_popup_informations .image').after('<div class="main_title">'+title+'</div>');
 		return false;
 	});
@@ -199,12 +199,12 @@ function aali_tm_service_popup(){
 // -----------  PORTFOLIO POPUP  -------------------
 // -------------------------------------------------
 
-function aali_tm_portfolio_popup(){
+function ehimy_tm_portfolio_popup(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.aali_tm_modalbox');
-	var button			= jQuery('.aali_tm_portfolio .portfolio_popup');
+	var modalBox		= jQuery('.ehimy_tm_modalbox');
+	var button			= jQuery('.ehimy_tm_portfolio .portfolio_popup');
 	var closePopup		= modalBox.find('.close');
 	
 	button.off().on('click',function(){
@@ -217,7 +217,7 @@ function aali_tm_portfolio_popup(){
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title">'+details+'<div>');
-		aali_tm_data_images();
+		ehimy_tm_data_images();
 		return false;
 	});
 	closePopup.on('click',function(){
@@ -231,12 +231,12 @@ function aali_tm_portfolio_popup(){
 // ----------------  NEWS POPUP  -------------------
 // -------------------------------------------------
 
-function aali_tm_news_popup(){
+function ehimy_tm_news_popup(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.aali_tm_modalbox');
-	var button			= jQuery('.aali_tm_news .list_inner .aali_tm_full_link,.aali_tm_news .news_list ul li .details .title a,.aali_tm_news .aali_tm_learn_more a');
+	var modalBox		= jQuery('.ehimy_tm_modalbox');
+	var button			= jQuery('.ehimy_tm_news .list_inner .ehimy_tm_full_link,.ehimy_tm_news .news_list ul li .details .title a,.ehimy_tm_news .ehimy_tm_learn_more a');
 	var closePopup		= modalBox.find('.close');
 	
 	button.on('click',function(){
@@ -249,7 +249,7 @@ function aali_tm_news_popup(){
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.news_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.news_popup_informations .image').after('<div class="details">'+details+'<div>');
-		aali_tm_data_images();
+		ehimy_tm_data_images();
 		return false;
 	});
 	closePopup.on('click',function(){
@@ -290,7 +290,7 @@ jQuery('.dodo_progress').each(function() {
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
 
-function aali_tm_preloader(){
+function ehimy_tm_preloader(){
 	
 	"use strict";
 	
@@ -314,19 +314,19 @@ function aali_tm_preloader(){
 // -----------------   MY LOAD    ----------------------
 // -----------------------------------------------------
 
-function aali_tm_my_load(){
+function ehimy_tm_my_load(){
 	
 	"use strict";
 	
 	var speed	= 500;
-	setTimeout(function(){aali_tm_preloader();},speed);
+	setTimeout(function(){ehimy_tm_preloader();},speed);
 }
 
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
 // -----------------------------------------------------
 
-function aali_tm_cursor(){
+function ehimy_tm_cursor(){
 	
     "use strict";
 	
@@ -340,9 +340,9 @@ function aali_tm_cursor(){
             o = !1;
         window.onmousemove = function (s) {
             o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a,.aali_tm_topbar .trigger, .cursor-pointer", function () {
+        }, $("body").on("mouseenter", "a,.ehimy_tm_topbar .trigger, .cursor-pointer", function () {
             e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a,.aali_tm_topbar .trigger, .cursor-pointer", function () {
+        }), $("body").on("mouseleave", "a,.ehimy_tm_topbar .trigger, .cursor-pointer", function () {
             $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
         }), e.style.visibility = "visible", t.style.visibility = "visible"
     }
@@ -353,7 +353,7 @@ function aali_tm_cursor(){
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-function aali_tm_imgtosvg(){
+function ehimy_tm_imgtosvg(){
 	
 	"use strict";
 	
@@ -387,7 +387,7 @@ function aali_tm_imgtosvg(){
 // --------------------   POPUP    ---------------------
 // -----------------------------------------------------
 
-function aali_tm_popup(){
+function ehimy_tm_popup(){
 	
 	"use strict";
 
@@ -426,21 +426,21 @@ function aali_tm_popup(){
 // -----------------    PORTFOLIO    ---------------
 // -------------------------------------------------
 
-function aali_tm_portfolio(){
+function ehimy_tm_portfolio(){
 
 	"use strict";
 	
 	if(jQuery().isotope) {
 
 		// Needed variables
-		var filter		 = jQuery('.aali_tm_portfolio .portfolio_filter ul');
+		var filter		 = jQuery('.ehimy_tm_portfolio .portfolio_filter ul');
 
 		if(filter.length){
 			// Isotope Filter 
 			filter.find('a').on('click', function(){
 				var element		= jQuery(this);
 				var selector 	= element.attr('data-filter');
-				var list		= element.closest('.aali_tm_portfolio').find('.portfolio_list').children('ul');
+				var list		= element.closest('.ehimy_tm_portfolio').find('.portfolio_list').children('ul');
 				list.isotope({ 
 					filter				: selector,
 					animationOptions	: {
@@ -462,7 +462,7 @@ function aali_tm_portfolio(){
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
 
-function aali_tm_data_images(){
+function ehimy_tm_data_images(){
 	
 	"use strict";
 	
@@ -479,7 +479,7 @@ function aali_tm_data_images(){
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
 
-function aali_tm_contact_form(){
+function ehimy_tm_contact_form(){
 	
 	"use strict";
 	
@@ -525,7 +525,7 @@ function aali_tm_contact_form(){
 // --------------------    JARALLAX    -----------------
 // -----------------------------------------------------
 
-function aali_tm_jarallax(){
+function ehimy_tm_jarallax(){
 	
 	"use strict";
 	
@@ -557,11 +557,11 @@ function aali_tm_jarallax(){
 // ----------------    OWL CAROUSEL    -----------------
 // -----------------------------------------------------
 
-function aali_tm_owl_carousel(){
+function ehimy_tm_owl_carousel(){
 
 	"use strict";
 	
-	var carousel			= jQuery('.aali_tm_testimonials .owl-carousel');
+	var carousel			= jQuery('.ehimy_tm_testimonials .owl-carousel');
 	
 	var rtlMode	= false;
 
@@ -606,7 +606,7 @@ function aali_tm_owl_carousel(){
 		return false;
 	});
 
-	aali_tm_imgtosvg();
+	ehimy_tm_imgtosvg();
 }
 
 // -----------------------------------------------------
@@ -637,7 +637,7 @@ jQuery('.tm_counter').each(function() {
 // -------------    PARALLAX ANIMATION    --------------
 // -----------------------------------------------------
 
-function aali_tm_about_animation(){
+function ehimy_tm_about_animation(){
 
 	"use strict";
 
@@ -655,7 +655,7 @@ function aali_tm_about_animation(){
 // -------------    MOVING ANIMATION    ----------------
 // -----------------------------------------------------
 
-function aali_tm_moving_animation(){
+function ehimy_tm_moving_animation(){
 	
 	"use strict";
 	
@@ -699,11 +699,11 @@ jQuery('.tilt-effect').tilt({
 // -----------------    DOWN    ------------------------
 // -----------------------------------------------------
 
-function aali_tm_down(){
+function ehimy_tm_down(){
 	
 	"use strict";
 	
-	var topbar	= jQuery('.aali_tm_header').outerHeight();
+	var topbar	= jQuery('.ehimy_tm_header').outerHeight();
 	
 	jQuery('.anchor').on('click',function(){
 		
@@ -721,7 +721,7 @@ function aali_tm_down(){
 /********** TOTOP ***********/ 
 /****************************/ 
 
-function aali_tm_totop(){
+function ehimy_tm_totop(){
   
   "use strict";
   
@@ -736,26 +736,26 @@ function aali_tm_totop(){
 	// ---------------------   SWITCHERS    ----------------
 	// -----------------------------------------------------
 
-	function aali_tm_color_switcher(){
+	function ehimy_tm_color_switcher(){
 		
 		"use strict";
 
-		var list	= jQuery('.aali_tm_settings .colors li a');
+		var list	= jQuery('.ehimy_tm_settings .colors li a');
 
 		list.on('click',function(){
 			var element = jQuery(this);
 			var elval	= element.attr('class');
-			element.closest('.aali_tm_all_wrap').attr('data-color',''+elval+'');
+			element.closest('.ehimy_tm_all_wrap').attr('data-color',''+elval+'');
 			return false;
 		});	
 	}
 
 
-	function aali_tm_switcher_opener(){
+	function ehimy_tm_switcher_opener(){
 		
 		"use strict";
 
-		var settings	= jQuery('.aali_tm_settings');
+		var settings	= jQuery('.ehimy_tm_settings');
 		var button		= settings.find('.link');
 		var direction	= settings.find('.direction li a');
 		var light		= settings.find('.direction li a.light');
@@ -765,10 +765,10 @@ function aali_tm_totop(){
 			var element = jQuery(this);
 			if(element.hasClass('opened')){
 				element.removeClass('opened');
-				element.closest('.aali_tm_settings').removeClass('opened');
+				element.closest('.ehimy_tm_settings').removeClass('opened');
 			}else{
 				element.addClass('opened');
-				element.closest('.aali_tm_settings').addClass('opened');
+				element.closest('.ehimy_tm_settings').addClass('opened');
 			}
 			return false;
 		});
@@ -784,29 +784,29 @@ function aali_tm_totop(){
 		dark.on('click',function(){
 			var el = jQuery(this);
 			jQuery('body').addClass('dark');
-			jQuery('.aali_tm_partners').addClass('opened');
-			el.closest('.aali_tm_settings').addClass('changed');
+			jQuery('.ehimy_tm_partners').addClass('opened');
+			el.closest('.ehimy_tm_settings').addClass('changed');
 			return false;
 		});
 
 		light.on('click',function(){
 			var ele = jQuery(this);
 			jQuery('body').removeClass('dark');
-			jQuery('.aali_tm_partners').removeClass('opened');
-			ele.closest('.aali_tm_settings').removeClass('changed');
+			jQuery('.ehimy_tm_partners').removeClass('opened');
+			ele.closest('.ehimy_tm_settings').removeClass('changed');
 			return false;
 		});
 	}
 
 
-	function aali_tm_cursor_switcher(){
+	function ehimy_tm_cursor_switcher(){
 		
 		"use strict";
 
-		var wrapper		= jQuery('.aali_tm_all_wrap');
-		var button		= jQuery('.aali_tm_settings .cursor li a');
-		var show		= jQuery('.aali_tm_settings .cursor li a.show');
-		var hide		= jQuery('.aali_tm_settings .cursor li a.hide');
+		var wrapper		= jQuery('.ehimy_tm_all_wrap');
+		var button		= jQuery('.ehimy_tm_settings .cursor li a');
+		var show		= jQuery('.ehimy_tm_settings .cursor li a.show');
+		var hide		= jQuery('.ehimy_tm_settings .cursor li a.hide');
 
 		button.on('click',function(){
 			var element = jQuery(this);
